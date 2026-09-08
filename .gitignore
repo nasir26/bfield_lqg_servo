@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+# Vivado / simulator scratch
+*.jou
+*.log
+xsim.dir/
+.Xil/

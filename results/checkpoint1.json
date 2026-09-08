@@ -1,0 +1,33 @@
+{
+  "marker": "[SIMULATED]",
+  "plant": {
+    "n_states": 13,
+    "coil_pole_hz": 31.830988618379067,
+    "dc_gain_u_to_trap_T_per_V": 0.0001000000030639857,
+    "dc_gain_d_to_trap": 1.000000031216717,
+    "dc_gain_u_to_meas_T_per_V": 0.00010000000305588045,
+    "dc_gain_d_to_meas": 1.0200000311979527,
+    "dc_mismatch_d": 0.019999999981235694
+  },
+  "disturbance": {
+    "rms_nT": 76.24113812596377,
+    "harmonics_hz": [
+      50.0,
+      100.0,
+      150.0,
+      250.0
+    ],
+    "harmonic_Q_intensity_T2_per_s": [
+      2.525000000000001e-17,
+      2.525000000000001e-17,
+      2.290000000000001e-18,
+      2.290000000000001e-18,
+      1.0225000000000001e-18,
+      1.0225000000000001e-18,
+      1.6640000000000006e-19,
+      1.6640000000000006e-19
+    ],
+    "drift_Q_intensity_T2_per_s": 4e-18
+  },
+  "note": "dc_mismatch_d is the disturbance gain difference between sensor and trap at DC. It is a hard floor on DC suppression at the ions: the loop drives the sensor to zero, and the trap keeps whatever the calibration and gradient got wrong."
+}

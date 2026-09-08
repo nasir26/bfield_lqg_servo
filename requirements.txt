@@ -1,0 +1,6 @@
+numpy==2.4.6
+scipy==1.17.1
+matplotlib==3.11.1
+control==0.10.2
+slycot==0.7.0
+pytest==9.1.1
