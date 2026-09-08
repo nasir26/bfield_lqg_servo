@@ -1,0 +1,43 @@
+{
+  "marker": "[SIMULATED]",
+  "fs_hz": 50000.0,
+  "estimator_comparison": {
+    "chirp_etfe_median_rel_err": 1.1256369915589088,
+    "stepped_sine_median_rel_err": 7.97288991886299e-06,
+    "chosen": "stepped_sine",
+    "why": "The plant spans about ten decades of gain, so an FFT-based estimate from broadband excitation is leakage-limited at high frequency. Stepped sine drives one tone at a time and rejects everything else by correlation, which is also what is done on hardware for a plant with this much rolloff. The two were compared against the known plant and the choice follows that measurement."
+  },
+  "coherence_floor": 0.9,
+  "bins_total": 60,
+  "bins_kept": 58,
+  "order_sweep": {
+    "3": {
+      "validation_fit_pct": 99.8699479742159,
+      "n_states": 3
+    },
+    "4": {
+      "validation_fit_pct": 99.9892924839142,
+      "n_states": 4
+    },
+    "5": {
+      "validation_fit_pct": 99.989296268673,
+      "n_states": 5
+    },
+    "6": {
+      "validation_fit_pct": 99.98929262534784,
+      "n_states": 6
+    },
+    "7": {
+      "validation_fit_pct": 99.98929727667156,
+      "n_states": 7
+    },
+    "8": {
+      "validation_fit_pct": 99.98930574784684,
+      "n_states": 8
+    }
+  },
+  "chosen_order": 4,
+  "training_fit_pct": 99.99419048155448,
+  "validation_fit_pct": 99.9892924839142,
+  "note": "The validation fit is measured on a random-phase multisine the model was never fitted to; the training fit is a chirp. Only the validation number is meaningful. Identification sees B_sensor only, as on hardware."
+}
